@@ -34,7 +34,7 @@ export default NextAuth({
             query.Create(
               query.Collection('users'),
               {
-                data: { email }
+                data: { email: user.email }
               }
             ),
             query.Get(
@@ -47,7 +47,7 @@ export default NextAuth({
         )
         return true
       } catch (error) {
-        console.log(error)
+        console.log("Erro:", error)
         return false
       }
     },
