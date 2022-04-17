@@ -38,6 +38,15 @@ export const getServerSideProps: GetServerSideProps = async ({req, params}) => {
   const session = await getSession({ req })
   const { slug } = params;
 
+  if(!session || !session.activeSubscription) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false,
+      }
+    }
+  }
+
   const prismic = await getPrismicClient()
   const response = await prismic.getByUID('Post', slug.toString())
   
@@ -45,7 +54,7 @@ export const getServerSideProps: GetServerSideProps = async ({req, params}) => {
   const post = {
     slug,
     title: response.data.title,
-    content: response.data.content.map(content => '<p>' + content.text.replace('\n', '<br/> <br/>') + '</p>'),
+    content: response.data.content.map(content => '<p>' + content.text.replace(/\n/g, '<br/> <br/>') + '</p>'),
     updated: new Date(response.last_publication_date).toLocaleDateString('pt-BR', {
       day: '2-digit',
       month: 'long',

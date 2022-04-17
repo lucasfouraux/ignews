@@ -46,10 +46,11 @@ export const getStaticProps: GetStaticProps = async() => {
   const response = await prismic.getByType('Post', { pageSize: 100})
 
   const posts = response.results.map(post => {
+    const content = post.data.content.find(content => content.type === 'paragraph')?.text ?? ''
     return {
       slug: post.uid,
       title: post.data.title,
-      excerpt: post.data.content.find(content => content.type === 'paragraph')?.text ?? '',
+      excerpt: content.substring(0, content.search('\n')),
       updatedAt: new Date(post.last_publication_date).toLocaleDateString('pt-BR', {
         day: '2-digit',
         month: 'long',
