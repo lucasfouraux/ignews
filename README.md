@@ -1,6 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
+> ## Getting Started
 
 First, run the development server:
 
@@ -14,21 +12,19 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+ > ## Bibliotecas e Ferramentas
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+* NPM
+* NextJS
+* React
+* Typescript
+* FaunaDB
+* Sass
+* Stripe
+* Prismic
 
-## Learn More
+> ### Images
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![home](https://user-images.githubusercontent.com/21143931/163730691-5abcd5f0-1351-4e91-ad12-06cf6ae8cc58.png)
+![posts](https://user-images.githubusercontent.com/21143931/163730695-587d07c7-7b80-41a7-986c-8b870cca6acf.png)
+![preview](https://user-images.githubusercontent.com/21143931/163730696-e8afd297-b50e-4267-ae60-27885175d10f.png)
